@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-'''3-lru_cache'''
+'''4-mru_cache'''
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class LRUCache(BaseCaching):
+class MRUCache(BaseCaching):
     '''This class inherits from BaseCaching
     and is a caching system'''
     def __init__(self):
@@ -14,7 +14,7 @@ class LRUCache(BaseCaching):
         '''This function assign to the dictionary
         self.cache_data the item value for the key'''
         if key is not None and item is not None:
-            if key in self.cache_data:
+            if key in self.cache_order:
                 self.cache_order.remove(key)
             self.cache_data[key] = item
             self.cache_order.append(key)
