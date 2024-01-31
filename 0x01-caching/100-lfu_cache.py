@@ -42,7 +42,8 @@ class LFUCache(BaseCaching):
                 key for key, freq in self.frequency.items()
                 if freq == min(self.frequency.values())
                 ]
-        least_recently_used_key = min(least_frequent_keys, key=self.cache_order.index)
+        least_recently_used_key = min(least_frequent_keys,
+                                      key=self.cache_order.index)
         del self.cache_data[least_recently_used_key]
         del self.frequency[least_recently_used_key]
         self.cache_order.remove(least_recently_used_key)
