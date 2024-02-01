@@ -9,6 +9,7 @@ class LRUCache(BaseCaching):
     def __init__(self):
         super().__init__()
         self.cache_order = []
+        self.cache_data = {}
 
     def put(self, key, item):
         '''This function assign to the dictionary
