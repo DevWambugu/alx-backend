@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''LIFOCache'''
 BaseCaching = __import__('base_caching').BaseCaching
 
@@ -13,7 +13,11 @@ class LIFOCache(BaseCaching):
 
     def put(self, key, item):
         '''This function assign to the dictionary
-        self.cache_data the item value for the key'''
+        self.cache_data the item value for the key
+        Args:
+        key: The items key
+        value: The value of the item to be stored
+        '''
         if key is not None and item is not None:
             self.cache_data[key] = item
             self.cache_order.append(key)

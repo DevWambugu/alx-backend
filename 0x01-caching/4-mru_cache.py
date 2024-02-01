@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''4-mru_cache'''
 BaseCaching = __import__('base_caching').BaseCaching
 
